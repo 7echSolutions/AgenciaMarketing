@@ -31,7 +31,6 @@
   border-radius: inherit;
   padding: 1px;
   background: linear-gradient(to bottom right, #d9af30, transparent);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
   z-index: -1;
 }

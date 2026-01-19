@@ -3,35 +3,42 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    
   ],
-  darkMode: 'class', // Activamos modo oscuro manual si hiciera falta
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        "primary": "#d9af30",
-        "primary-dark": "#b08d26",
-        "background-light": "#f8f7f6",
-        "background-dark": "#050505",
-        "surface-dark": "#1A1A1A",
+        /* Accent */
+        "primary": "#3BC9DB",
+        "primary-dark": "#1098AD",
+        "primary-soft": "#66D9E8",
+
+        /* Backgrounds */
+        "background-dark": "#0B1F33",
+        "background-mid": "#102A43",
+        "background-light": "#E7F5FF",
+
+        /* Surfaces */
+        "surface-dark": "#123A5A",
+        "surface-hover": "#164B73",
       },
       fontFamily: {
-        "display": ["Noto Serif", "serif"],
-        "body": ["Manrope", "sans-serif"],
+        display: ["Noto Serif", "serif"],
+        body: ["Manrope", "sans-serif"],
       },
       boxShadow: {
-        'glow': '0 0 40px -10px rgba(217, 175, 48, 0.3)',
+        glow: "0 0 45px -10px rgba(59, 201, 219, 0.35)",
       },
       animation: {
-        'fade-in-up': 'fadeInUp 1s ease-out forwards',
+        "fade-in-up": "fadeInUp 1s ease-out forwards",
       },
       keyframes: {
         fadeInUp: {
-          '0%': { opacity: '0', transform: 'translateY(20px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
-        }
-      }
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+      },
     },
   },
   plugins: [],
-}
+};
