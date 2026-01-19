@@ -1,42 +1,51 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Importamos las fuentes locales */
+@import '@fontsource/noto-serif/400.css';
+@import '@fontsource/noto-serif/700.css';
+@import '@fontsource/noto-serif/900.css';
+@import '@fontsource/manrope/300.css';
+@import '@fontsource/manrope/400.css';
+@import '@fontsource/manrope/600.css';
+
+/* Importamos los iconos locales */
+@import 'material-symbols'; 
+
+/* Estilos personalizados extraídos del HTML */
+.text-glow {
+  text-shadow: 0 0 30px rgba(217, 175, 48, 0.3);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.gold-gradient-border {
+  position: relative;
+  background: transparent;
+  z-index: 1;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.gold-gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(to bottom right, #d9af30, transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  z-index: -1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card {
-  padding: 2em;
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px -10px rgba(217, 175, 48, 0.15);
 }
 
-.read-the-docs {
-  color: #888;
+/* Forzamos el modo oscuro por defecto en el body */
+body {
+  @apply bg-background-dark text-slate-100 font-body antialiased;
 }
