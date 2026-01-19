@@ -2,18 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Importamos las fuentes locales */
-@import '@fontsource/noto-serif/400.css';
-@import '@fontsource/noto-serif/700.css';
-@import '@fontsource/noto-serif/900.css';
-@import '@fontsource/manrope/300.css';
-@import '@fontsource/manrope/400.css';
-@import '@fontsource/manrope/600.css';
+/* --- ESTILOS PERSONALIZADOS --- */
 
-/* Importamos los iconos locales */
-@import 'material-symbols'; 
-
-/* Estilos personalizados extraídos del HTML */
 .text-glow {
   text-shadow: 0 0 30px rgba(217, 175, 48, 0.3);
 }

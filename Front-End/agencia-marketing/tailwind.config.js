@@ -3,6 +3,7 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+    
   ],
   darkMode: 'class', // Activamos modo oscuro manual si hiciera falta
   theme: {
