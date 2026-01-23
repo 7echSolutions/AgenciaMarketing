@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import React from "react";
 import { useNavigate } from "react-router-dom"; // <--- 1. Importamos esto
-=======
-import { Link } from "react-router-dom";
-
->>>>>>> 6e70bf9a2b76793b601c2baeaa00dd5df61f4914
 
 const courses = [
   {
@@ -141,16 +136,12 @@ export default function CoursesScreen() {
               </div>
 
               {/* Botón con Material Symbol */}
-<<<<<<< HEAD
               <button className="w-full py-4 px-4 bg-primary-dark/5 border border-primary/30 text-primary font-bold rounded-xl flex items-center justify-center gap-3 group-hover:bg-primary group-hover:text-background-dark transition-all duration-300">
-=======
-              <Link to="/product" className="w-full py-4 px-4 bg-primary-dark/5 border border-primary/30 text-primary-soft font-bold rounded-xl flex items-center justify-center gap-3 group-hover:bg-primary group-hover:text-background-dark transition-all duration-300">
->>>>>>> 6e70bf9a2b76793b601c2baeaa00dd5df61f4914
                 Explorar Programa
                 <span className="material-symbols-outlined text-xl transition-transform group-hover:translate-x-2">
                   arrow_right_alt
                 </span>
-              </Link>
+              </button>
             </div>
           </div>
         ))}
