@@ -1,9 +1,7 @@
-import React from "react";
 
 export default function ProductPage() {
   return (
     <div className="flex min-h-screen flex-col bg-rich-black text-white font-body overflow-x-hidden selection:bg-primary/30">
-      {/* Navigation (Simplificada para mantener estilo) */}
       <header className="sticky top-0 z-50 w-full border-b border-[#37342a] bg-rich-black/90 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-[1440px] items-center justify-between px-6 lg:px-10">
           <div className="flex items-center gap-3 cursor-pointer">
