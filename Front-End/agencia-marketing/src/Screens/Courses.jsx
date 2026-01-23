@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+
+
 const courses = [
   {
     id: 1,
@@ -124,12 +127,12 @@ export default function CoursesScreen() {
               </div>
 
               {/* Botón con Material Symbol */}
-              <button className="w-full py-4 px-4 bg-primary-dark/5 border border-primary/30 text-primary-soft font-bold rounded-xl flex items-center justify-center gap-3 group-hover:bg-primary group-hover:text-background-dark transition-all duration-300">
+              <Link to="/product" className="w-full py-4 px-4 bg-primary-dark/5 border border-primary/30 text-primary-soft font-bold rounded-xl flex items-center justify-center gap-3 group-hover:bg-primary group-hover:text-background-dark transition-all duration-300">
                 Explorar Programa
                 <span className="material-symbols-outlined text-xl transition-transform group-hover:translate-x-2">
                   arrow_right_alt
                 </span>
-              </button>
+              </Link>
             </div>
 
           </div>
