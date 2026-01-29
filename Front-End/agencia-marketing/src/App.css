@@ -2,35 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Importamos las fuentes locales */
+/* Importamos fuentes e iconos (se mantienen igual) */
 @import '@fontsource/noto-serif/400.css';
 @import '@fontsource/noto-serif/700.css';
 @import '@fontsource/noto-serif/900.css';
 @import '@fontsource/manrope/300.css';
 @import '@fontsource/manrope/400.css';
 @import '@fontsource/manrope/600.css';
-
-/* Importamos los iconos locales */
 @import 'material-symbols'; 
 
-/* Estilos personalizados extraídos del HTML */
+/* --- ESTILOS PERSONALIZADOS (Bordó Theme) --- */
+
+/* El brillo ahora es rojo vino */
 .text-glow {
-  text-shadow: 0 0 30px rgba(217, 175, 48, 0.3);
+  text-shadow: 0 0 40px rgba(128, 0, 32, 0.6); 
 }
 
-.gold-gradient-border {
+/* Borde degradado: Del bordó al transparente */
+.custom-gradient-border {
   position: relative;
   background: transparent;
   z-index: 1;
 }
 
-.gold-gradient-border::before {
+.custom-gradient-border::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(to bottom right, #d9af30, transparent);
+  /* Degradado de Bordó a transparente */
+  background: linear-gradient(to bottom right, #800020, transparent); 
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
   z-index: -1;
 }
@@ -41,10 +44,10 @@
 
 .hover-lift:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px -10px rgba(217, 175, 48, 0.15);
+  /* Sombra sutil en color vino al levantar */
+  box-shadow: 0 10px 30px -10px rgba(128, 0, 32, 0.25);
 }
 
-/* Forzamos el modo oscuro por defecto en el body */
 body {
-  @apply bg-background-dark text-slate-100 font-body antialiased;
+  @apply bg-background-dark text-slate-200 font-body antialiased selection:bg-primary selection:text-white;
 }

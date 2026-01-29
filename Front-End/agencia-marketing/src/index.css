@@ -2,55 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-/* --- ESTILOS PERSONALIZADOS --- */
+/* --- ESTILOS PERSONALIZADOS (Bordó Theme) --- */
 
+/* Brillo Rojo/Vino */
 .text-glow {
-  text-shadow: 0 0 30px rgba(217, 175, 48, 0.3);
+  text-shadow: 0 0 40px rgba(128, 0, 32, 0.5);
 }
 
-.gold-gradient-border {
+/* Borde degradado: Del bordó al transparente */
+.primary-gradient-border {
   position: relative;
   background: transparent;
   z-index: 1;
 }
 
-.gold-gradient-border::before {
+.primary-gradient-border::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(to bottom right, #d9af30, transparent);
+  background: linear-gradient(to bottom right, #800020, transparent);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
   z-index: -1;
 }
 
-
 .hover-lift {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-/* Estilos nuevos para la página de producto */
-.gold-gradient-bg {
-  background: linear-gradient(135deg, #FFE180, #D5B147, #A4852F);
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  /* Sombra sutil color vino */
+  box-shadow: 0 10px 30px -10px rgba(128, 0, 32, 0.2);
 }
 
-.gold-gradient-bg:hover {
-  background: linear-gradient(135deg, #ffeb9e, #e3c15c, #bfa045);
+/* Botón de compra (Degradado Bordó elegante) */
+.primary-gradient-bg {
+  background: linear-gradient(135deg, #a31538, #800020, #4a0012);
+}
+
+.primary-gradient-bg:hover {
+  background: linear-gradient(135deg, #c41e45, #9e0e2e, #630018);
 }
 
 /* Efecto Glass */
 .glass-panel {
-  background: rgba(23, 22, 18, 0.7);
+  background: rgba(18, 18, 18, 0.7);
   backdrop-filter: blur(12px);
-}
-.hover-lift:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px -10px rgba(217, 175, 48, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Forzamos el modo oscuro por defecto en el body */
+/* Body: Forzamos el modo oscuro y selección de texto en bordó */
 body {
-  @apply bg-background-dark text-slate-100 font-body antialiased;
+  @apply bg-background-dark text-slate-100 font-body antialiased selection:bg-primary selection:text-white;
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // <--- 1. Importamos esto
+import { useNavigate } from "react-router-dom";
 
 const courses = [
   {
@@ -55,7 +55,7 @@ const courses = [
 ];
 
 export default function CoursesScreen() {
-  const navigate = useNavigate(); // <--- 2. Inicializamos el hook
+  const navigate = useNavigate();
 
   return (
     <div className="min-h-screen bg-background-dark font-body text-white p-8 pb-20">
@@ -63,7 +63,7 @@ export default function CoursesScreen() {
       <header className="max-w-7xl mx-auto mb-16 pt-12 animate-fade-in-up">
         <div className="flex items-center gap-3 mb-6">
           <span className="h-[1px] w-12 bg-primary"></span>
-          <span className="text-primary uppercase tracking-[0.4em] text-[10px] font-bold">
+          <span className="text-primary-soft uppercase tracking-[0.4em] text-[10px] font-bold">
             Formación de Élite
           </span>
         </div>
@@ -73,11 +73,10 @@ export default function CoursesScreen() {
           Profesional
         </h1>
 
-        <div className="max-w-3xl border-l border-primary-dark/50 pl-8">
-          <p className="text-slate-400 text-lg md:text-xl leading-relaxed">
+        <div className="max-w-3xl border-l border-primary/30 pl-8">
+          <p className="text-accent text-lg md:text-xl leading-relaxed">
             Explora una selección rigurosa de programas diseñados para líderes
-            tecnológicos. Domina las competencias más críticas del mercado con
-            una metodología de aprendizaje profundo y visión empresarial.
+            tecnológicos. Domina las competencias más críticas del mercado.
           </p>
         </div>
       </header>
@@ -87,7 +86,6 @@ export default function CoursesScreen() {
         {courses.map((course) => (
           <div
             key={course.id}
-            // <--- 3. Agregamos el onClick aquí para que toda la tarjeta sea cliqueable
             onClick={() => navigate("/product")}
             className="group bg-surface-dark border border-white/5 rounded-2xl overflow-hidden hover:shadow-glow transition-all duration-500 hover:-translate-y-3 cursor-pointer"
           >
@@ -99,7 +97,7 @@ export default function CoursesScreen() {
                 alt={course.title}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
-              <div className="absolute top-4 left-4 bg-background-dark/40 backdrop-blur-md border border-white/10 text-primary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">
+              <div className="absolute top-4 left-4 bg-background-dark/60 backdrop-blur-md border border-white/10 text-primary-soft text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">
                 {course.category}
               </div>
             </div>
@@ -111,7 +109,7 @@ export default function CoursesScreen() {
               </h3>
 
               <div className="flex items-center gap-2 text-slate-400 text-sm mb-6">
-                <span className="material-symbols-outlined text-sm">
+                <span className="material-symbols-outlined text-sm text-accent">
                   school
                 </span>
                 <span>Inst. {course.instructor}</span>
@@ -126,17 +124,17 @@ export default function CoursesScreen() {
                   <span className="font-medium">{course.duration}</span>
                 </div>
 
-                {/* Rating */}
-                <div className="flex items-center gap-1.5 text-yellow-400">
+                {/* Rating (Ahora en Plata/Accent para más clase) */}
+                <div className="flex items-center gap-1.5 text-accent">
                   <span className="material-symbols-outlined text-xl fill-[1]">
                     star
                   </span>
-                  <span className="font-bold text-base">{course.rating}</span>
+                  <span className="font-bold text-base text-white">{course.rating}</span>
                 </div>
               </div>
 
-              {/* Botón con Material Symbol */}
-              <button className="w-full py-4 px-4 bg-primary-dark/5 border border-primary/30 text-primary font-bold rounded-xl flex items-center justify-center gap-3 group-hover:bg-primary group-hover:text-background-dark transition-all duration-300">
+              {/* Botón */}
+              <button className="w-full py-4 px-4 bg-primary/5 border border-primary/30 text-primary-soft font-bold rounded-xl flex items-center justify-center gap-3 group-hover:bg-primary group-hover:text-white transition-all duration-300">
                 Explorar Programa
                 <span className="material-symbols-outlined text-xl transition-transform group-hover:translate-x-2">
                   arrow_right_alt
